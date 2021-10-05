@@ -38,4 +38,5 @@ Below that we can see the top 5 popular anime which is from MyAnimeList website
 Below that we can see the searched results. There we can see the results of what anime we have searched for in the search bar.
 
 I have used the API from Jikan. 
+
 Jikan (時間) is an open-source PHP & REST API for the “most active online anime + manga community and database” — MyAnimeList.net. It parses the website to satisfy the need for an API.

@@ -1,0 +1,33 @@
+<div>
+    <header>
+        <h1 routerLink="/">The<strong>Anime</strong>SearchDatabase</h1>
+        <form class="search-box" id="search_form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+            <input type="search" name="search" id="search" class="search-field" placeholder="Search for an anime..." value=""
+                required [(ngModel)]="sort" />
+        </form>
+    </header>
+    <h3 class="anime-text">Top Popular Anime</h3>
+    <div class="card-container">
+        <div class="card" *ngFor="let topanime of topanimedata">
+            <a href="{{topanime.url}}" target="_blank">
+                <img 
+                    src="{{topanime.image_url}}"
+                    alt="{{topanime.title}} + ' Poster'"
+                />
+                <h3>{{topanime.title}}</h3>
+            </a>
+        </div>
+    </div> 
+    <h3 class="anime-text">Search Results</h3>
+    <div class="result-card-container">
+        <div class="result-card result-card" *ngFor="let anime of animelists">
+            <a href="{{anime.url}}" target="_blank">
+                <img 
+                    src="{{anime.image_url}}"
+                    alt="{{anime.title}} + ' Poster'"
+                />
+                <h3>{{anime.title}}</h3>
+            </a>
+        </div>
+    </div>
+</div>
